@@ -1,5 +1,23 @@
-module.exports = {
-  "/docs/note/": [
+const loop = (data) => {
+  data.forEach(item => {
+    if (item.link) {
+      item.link = `/docs${item.link}`
+    }
+    if (item.children) {
+      loop(item.children)
+    }
+  })
+  return data
+}
+const conver = (route) => {
+  const tmp = {}
+  Object.keys(route).forEach(item => {
+    tmp[`/docs/${item}/`] = loop(route[item])
+  })
+  return tmp
+}
+const sidebar = {
+  "note": [
     {
       text: "笔记记录",
       collapsable: false,
@@ -11,7 +29,7 @@ module.exports = {
       ],
     },
   ],
-  "/docs/open_source/": [
+  "open_source": [
     {
       text: "我的开源",
       collapsable: false,
@@ -19,7 +37,7 @@ module.exports = {
       children: [{ text: "buildservice", link: "/open_source/" }],
     },
   ],
-  "/docs/grocery_store/": [
+  "grocery_store": [
     {
       text: "杂货铺",
       collapsable: false,
@@ -27,4 +45,6 @@ module.exports = {
       children: [{ text: "前端架构师", link: "/grocery_store/" }],
     },
   ],
-};
+}
+
+module.exports = conver(sidebar)
