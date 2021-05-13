@@ -1,5 +1,5 @@
 module.exports = {
-  "/note/": [
+  "/docs/note/": [
     {
       text: "笔记记录",
       collapsable: false,
@@ -11,7 +11,7 @@ module.exports = {
       ],
     },
   ],
-  "/open_source/": [
+  "/docs/open_source/": [
     {
       text: "我的开源",
       collapsable: false,
@@ -19,7 +19,7 @@ module.exports = {
       children: [{ text: "buildservice", link: "/open_source/" }],
     },
   ],
-  "/grocery_store/": [
+  "/docs/grocery_store/": [
     {
       text: "杂货铺",
       collapsable: false,
