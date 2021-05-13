@@ -7,8 +7,7 @@ function tran(path) {
     const res = path.replace(/\\/g, "/").split("public")
     return res[res.length - 1]
 }
-
-function getPublicFile(root = resolve(__dirname, "./../public")) {
+function getPublicFile(root = resolve(__dirname, "./public")) {
     let files = {}
     function fn(root) {
         const dirents = readdirSync(root, { withFileTypes: true });

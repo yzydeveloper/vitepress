@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /images/logo.jpg
+heroImage: /assets/logo.jpg
 heroAlt: Logo image
 heroText: ONE PIECE
 tagline: WEB ONE PIECE

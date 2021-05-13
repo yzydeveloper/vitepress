@@ -7,12 +7,12 @@ module.exports = {
       "link",
       {
         rel: "icon",
-        href: "/images/favicon.ico",
+        href: "/assets/favicon.ico",
       },
     ],
   ],
   themeConfig: {
-    logo: "/images/favicon.ico",
+    logo: "/assets/favicon.ico",
     nav: require("./config/nav"),
     sidebar: require("./config/sidebar"),
     smoothScroll: true,
